@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Covid -19 Stats
+        </title>
+        
+       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
+<link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+     <nav>
+         <div id="index">
+             <div id="r">
+          <span> <i  id="red" class="fas fa-map-marker-alt"></i> </span> 
+         <span id="high">: High</span>
+        </div>
+        <div id="b">
+            <span> <i  id="blue" class="fas fa-map-marker-alt"></i> </span> 
+           <span id="low">: Low</span>
+          </div>
+          <div id="o">
+            <span> <i  id="orange" class="fas fa-map-marker-alt"></i> </span> 
+           <span id="med">: Moderate</span>
+          </div>
+         </div>
+     </nav>
+<div id='map' style='width: 100%; height: 90vh;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyc2hib2x0eiIsImEiOiJja3YwcWtsM3AwaDUyMm5wYXRqZDZ6cmZyIn0.iVDLfzINBXoCEuskWlrIwA';
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+</script>
+    </body>
+    <script src="script.js"></script>
+</html>
